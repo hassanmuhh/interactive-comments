@@ -1,0 +1,230 @@
+.commentWrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--neutral-white);
+  border-radius: 0.8rem;
+
+  padding: 1.6rem 2.4rem;
+  gap: 1.2rem;
+}
+
+.voteArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.8rem 1.2rem;
+  flex: 1;
+
+  background-color: var(--neutral-light-gray);
+  border-radius: 0.4rem;
+}
+
+.newComment {
+  flex: none;
+}
+
+.voteArea button {
+  background-color: transparent;
+  border: none;
+  color: var(--primary-light-blue);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.voteArea p {
+  font-size: 1.8rem;
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+.commentContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.commentHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.userName {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.commentDate {
+  font-size: 1.4rem;
+  color: var(--neutral-grayish-blue);
+}
+
+.userImg {
+  width: 3rem;
+}
+
+.you {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-blue);
+  color: var(--neutral-white);
+  padding: 0 0.4rem;
+  font-size: 1.2rem;
+  border-radius: 0.2rem;
+}
+
+.turnedInput {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.turnedInput p {
+  font-size: 1.6rem;
+  padding: 1.4rem;
+}
+
+.turnedInput p:focus {
+  outline: 1px solid var(--primary-blue);
+  border-radius: 0.4rem;
+}
+
+.turnedInput .updateBtn {
+  padding: 0.8rem 1.4rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--neutral-white);
+  background-color: var(--primary-blue);
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.commentText p {
+  font-size: 1.6rem;
+  color: var(--neutral-grayish-blue);
+}
+
+.currentUserBtns {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.commentHead button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  gap: 0.6rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.replyBtn,
+.editBtn {
+  color: var(--primary-blue);
+}
+
+.deleteBtn {
+  color: var(--primary-red);
+}
+
+.replyArea {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.2rem;
+
+  padding-left: 5.4rem;
+  border-left: 3px solid var(--neutral-very-light-gray);
+}
+
+.replyingTo {
+  color: var(--primary-blue);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Hover States */
+
+button {
+  transition: all 0.2s;
+}
+
+.voteArea .btn:hover {
+  color: var(--primary-blue);
+}
+
+.updateBtn:hover {
+  background-color: var(--primary-light-blue);
+}
+
+.replyBtn:hover,
+.editBtn:hover,
+.deleteBtn:hover {
+  color: var(--primary-light-blue);
+}
+
+/* Media Queries */
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  .currentUserBtns {
+    gap: 0.8rem;
+  }
+}
+
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  .commentWrapper {
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .voteArea {
+    flex-direction: row;
+    align-items: flex-end;
+    order: 1;
+    flex: none;
+  }
+
+  .replyBtn {
+    position: absolute;
+    right: 1.8rem;
+    bottom: 1.8rem;
+  }
+
+  .currentUserBtns {
+    position: absolute;
+    right: 1.8rem;
+    bottom: 1.8rem;
+  }
+
+  .replyArea {
+    width: 100%;
+    padding-left: 1.2rem;
+  }
+
+}

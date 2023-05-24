@@ -1,0 +1,118 @@
+.addCommentWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2.4rem;
+  background-color: var(--neutral-white);
+  border-radius: 0.8rem;
+  padding: 1.2rem;
+  gap: 1.2rem;
+}
+
+.addReplyWrapper {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.2rem;
+  padding-left: 5.4rem;
+  border-left: 3px solid var(--neutral-very-light-gray);
+}
+
+.addReply {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--neutral-white);
+  border-radius: 0.8rem;
+  padding: 1.6rem 2.4rem;
+  gap: 1.2rem;
+}
+
+.textArea {
+  resize: none;
+  width: 75%;
+  padding: 0.8rem 0 4.6rem 1.4rem;
+  border-radius: 0.4rem;
+  border: 2px solid var(--neutral-light-gray);
+}
+
+.textArea:focus {
+  outline: none;
+}
+
+.addBtn {
+  padding: 0.8rem 2.4rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--neutral-white);
+  background-color: var(--primary-blue);
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.userImg {
+  width: 3rem;
+}
+
+.addBtn:hover {
+  background-color: var(--primary-light-blue);
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  .addReplyWrapper {
+    width: 100%;
+    padding-left: 3.2rem;
+  }
+}
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+
+@media (max-width: 44em) {
+
+  .addReplyWrapper {
+    width: 100%;
+    padding-left: 1.2rem;
+  }
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  .addCommentWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    width: 100%;
+  }
+
+  .textArea {
+    order: -1;
+    width: 85%;
+    margin: 0 auto;
+    grid-area: 1 / span 2;
+  }
+
+  .addBtn,
+  .userImg {
+    grid-area: 2;
+  }
+
+  .addBtn {
+    width: 50%;
+    justify-self: end;
+    display: flex;
+    justify-content: center;
+  }
+
+}
